@@ -288,4 +288,4 @@ DerivedData/
 ## Gcc Patch
 /*.gcno
 
-*.APIKeys.swift
+17-creating-custom-reactive-extension/projects/starter/iGif/APIKeys.swift
