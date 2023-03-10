@@ -39,3 +39,15 @@ public enum RxURLSessionError: Error {
   case requestFailed(response: HTTPURLResponse, data: Data?)
   case deserializationFailed
 }
+
+extension Reactive where Base: URLSession {
+    func response(request: URLRequest) -> Observable<(HTTPURLResponse, Data)> {
+        return Observable.create { observer in
+            let task = self.base.dataTask(with: request) { data, response, error in
+                <#code#>
+            }
+            task.resume()
+            return Disposables.create { task.cancel() }
+        }
+    }
+}
