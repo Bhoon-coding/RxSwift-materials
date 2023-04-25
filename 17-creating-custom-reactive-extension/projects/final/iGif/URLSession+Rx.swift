@@ -69,12 +69,12 @@ extension Reactive where Base: URLSession {
   }
 
   func data(request: URLRequest) -> Observable<Data> {
-    if let url = request.url?.absoluteString,
-       let data = internalCache[url] {
-      return Observable.just(data)
-    }
+//    if let url = request.url?.absoluteString,
+//       let data = internalCache[url] {
+//      return Observable.just(data)
+//    }
 
-    return response(request: request).cache().map { response, data -> Data in
+    return response(request: request).map { response, data -> Data in
       guard 200 ..< 300 ~= response.statusCode else {
         throw RxURLSessionError.requestFailed(response: response, data: data)
       }

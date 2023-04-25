@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C51126FFD74966BC1602B1E /* Pods_iGif.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C24C66E4E0E7A1DF2FA722DF /* Pods_iGif.framework */; };
 		A27009322210B60200BDFEEC /* GiphyGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27009312210B60200BDFEEC /* GiphyGif.swift */; };
 		A27009342210B6E500BDFEEC /* GiphySearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27009332210B6E500BDFEEC /* GiphySearchResponse.swift */; };
 		CB8945F61E41C9B600F46229 /* GifTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8945F51E41C9B600F46229 /* GifTableViewCell.swift */; };
@@ -19,6 +20,7 @@
 		CBB17E2B1E41B72E0016EBA9 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = CBB17E2A1E41B72E0016EBA9 /* Podfile */; };
 		CBB17E2F1E41B8790016EBA9 /* URLSession+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB17E2E1E41B8790016EBA9 /* URLSession+Rx.swift */; };
 		CBB17E311E41B8AF0016EBA9 /* ApiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB17E301E41B8AF0016EBA9 /* ApiController.swift */; };
+		D8A1F572C53B5DA02BCE2472 /* Pods_iGifTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AA79B074312C617EF5B33B9 /* Pods_iGifTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,8 +34,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0AA79B074312C617EF5B33B9 /* Pods_iGifTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iGifTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		199970D786A127823ADA899E /* Pods-iGif.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iGif.debug.xcconfig"; path = "Target Support Files/Pods-iGif/Pods-iGif.debug.xcconfig"; sourceTree = "<group>"; };
+		3B38C62427E3886F674B5BBE /* Pods-iGifTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iGifTests.release.xcconfig"; path = "Target Support Files/Pods-iGifTests/Pods-iGifTests.release.xcconfig"; sourceTree = "<group>"; };
+		9120D44B549B03C8ECFAEB22 /* Pods-iGifTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iGifTests.debug.xcconfig"; path = "Target Support Files/Pods-iGifTests/Pods-iGifTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A27009312210B60200BDFEEC /* GiphyGif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiphyGif.swift; sourceTree = "<group>"; };
 		A27009332210B6E500BDFEEC /* GiphySearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiphySearchResponse.swift; sourceTree = "<group>"; };
+		BFD7CE6179F23460014762DB /* Pods-iGif.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iGif.release.xcconfig"; path = "Target Support Files/Pods-iGif/Pods-iGif.release.xcconfig"; sourceTree = "<group>"; };
+		C24C66E4E0E7A1DF2FA722DF /* Pods_iGif.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iGif.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB8945F51E41C9B600F46229 /* GifTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifTableViewCell.swift; sourceTree = "<group>"; };
 		CB8945F71E424A5500F46229 /* MainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		CBB17E051E41227B0016EBA9 /* iGif.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iGif.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -55,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C51126FFD74966BC1602B1E /* Pods_iGif.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,12 +71,34 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8A1F572C53B5DA02BCE2472 /* Pods_iGifTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5F2C4CB836C0F2A47E0F7C3C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C24C66E4E0E7A1DF2FA722DF /* Pods_iGif.framework */,
+				0AA79B074312C617EF5B33B9 /* Pods_iGifTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7C42A95713873C3F7FD30065 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				199970D786A127823ADA899E /* Pods-iGif.debug.xcconfig */,
+				BFD7CE6179F23460014762DB /* Pods-iGif.release.xcconfig */,
+				9120D44B549B03C8ECFAEB22 /* Pods-iGifTests.debug.xcconfig */,
+				3B38C62427E3886F674B5BBE /* Pods-iGifTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		A27009302210B5F400BDFEEC /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +123,8 @@
 				CBB17E071E41227B0016EBA9 /* iGif */,
 				CBB17E1C1E41227C0016EBA9 /* iGifTests */,
 				CBB17E061E41227B0016EBA9 /* Products */,
+				7C42A95713873C3F7FD30065 /* Pods */,
+				5F2C4CB836C0F2A47E0F7C3C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -153,9 +186,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CBB17E221E41227C0016EBA9 /* Build configuration list for PBXNativeTarget "iGif" */;
 			buildPhases = (
+				9508880FD2739028E958001B /* [CP] Check Pods Manifest.lock */,
 				CBB17E011E41227B0016EBA9 /* Sources */,
 				CBB17E021E41227B0016EBA9 /* Frameworks */,
 				CBB17E031E41227B0016EBA9 /* Resources */,
+				ECF7F5B689E9EE6749E9CD34 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -170,9 +205,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CBB17E251E41227C0016EBA9 /* Build configuration list for PBXNativeTarget "iGifTests" */;
 			buildPhases = (
+				578DB448A989BB599264BE75 /* [CP] Check Pods Manifest.lock */,
 				CBB17E151E41227C0016EBA9 /* Sources */,
 				CBB17E161E41227C0016EBA9 /* Frameworks */,
 				CBB17E171E41227C0016EBA9 /* Resources */,
+				6AC46B15E2C6B4487C0553DB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -196,6 +233,7 @@
 				TargetAttributes = {
 					CBB17E041E41227B0016EBA9 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = H84YUCF7F5;
 						ProvisioningStyle = Automatic;
 					};
 					CBB17E181E41227C0016EBA9 = {
@@ -244,6 +282,105 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		578DB448A989BB599264BE75 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iGifTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6AC46B15E2C6B4487C0553DB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iGifTests/Pods-iGifTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Gifu/Gifu.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/OHHTTPStubs/OHHTTPStubs.framework",
+				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
+				"${BUILT_PRODUCTS_DIR}/RxNimble/RxNimble.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Gifu.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OHHTTPStubs.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxNimble.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iGifTests/Pods-iGifTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9508880FD2739028E958001B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iGif-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ECF7F5B689E9EE6749E9CD34 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iGif/Pods-iGif-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Gifu/Gifu.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Gifu.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iGif/Pods-iGif-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CBB17E011E41227B0016EBA9 /* Sources */ = {
@@ -411,12 +548,13 @@
 		};
 		CBB17E231E41227C0016EBA9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 199970D786A127823ADA899E /* Pods-iGif.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = H84YUCF7F5;
 				INFOPLIST_FILE = iGif/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.raywenderlich.iGif;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bhooncoding.iGif;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 			};
@@ -424,12 +562,13 @@
 		};
 		CBB17E241E41227C0016EBA9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BFD7CE6179F23460014762DB /* Pods-iGif.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = H84YUCF7F5;
 				INFOPLIST_FILE = iGif/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.raywenderlich.iGif;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bhooncoding.iGif;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 			};
@@ -437,6 +576,7 @@
 		};
 		CBB17E261E41227C0016EBA9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9120D44B549B03C8ECFAEB22 /* Pods-iGifTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = "";
@@ -451,6 +591,7 @@
 		};
 		CBB17E271E41227C0016EBA9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B38C62427E3886F674B5BBE /* Pods-iGifTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = "";
