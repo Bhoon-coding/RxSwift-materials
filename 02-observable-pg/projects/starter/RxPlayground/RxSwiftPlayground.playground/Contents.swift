@@ -100,34 +100,111 @@ import RxSwift
 //}
 
 // MARK: - create
+//example(of: "create") {
+//
+//    enum MyError: Error {
+//        case anError
+//    }
+//
+//    let disposeBag = DisposeBag()
+//
+//    Observable<String>.create { observer in
+//        // 1 - 방출하고
+//        observer.onNext("1")
+//
+////        observer.onError(MyError.anError)
+//
+//        // 2 - 끝나고
+////        observer.onCompleted()
+//
+//        // 3 - 끝났으니까 넘어가고
+//        observer.onNext("?")
+//
+//        // 4 - dispose 호출
+//        return Disposables.create()
+//    }
+//    .subscribe(onNext: { print($0) },
+//               onError: { print($0) },
+//               onCompleted: { print("Completed") },
+//               onDisposed: { print("Disposed") }
+//    )
+//    .disposed(by: disposeBag) /// dispose를 안해주면 observable이 계속해서 돌아가고 있어 memory leak이 발생함.
+//}
 
-enum MyError: Error {
-    case anError
-}
+// MARK: - deferred
+//example(of: "deferred") {
+//    let disposeBag = DisposeBag()
+//
+//    // 1
+//    var flip = false
+//
+//    // 2
+//    let factory: Observable<Int> = Observable.deferred {
+//
+//        // 3
+//        flip.toggle()
+//
+//        // 4
+//        if flip {
+//            return Observable.of(1, 2, 3)
+//        } else {
+//            return Observable.of(4, 5, 6)
+//        }
+//    }
+//
+//    for _ in 0...4 {
+//        factory.subscribe(onNext: {
+//            print($0, terminator: "")
+//        })
+//        .disposed(by: disposeBag)
+//
+//        print()
+//    }
+//}
 
-example(of: "create") {
+// MARK: - Single
+example(of: "Single") {
     let disposeBag = DisposeBag()
     
-    Observable<String>.create { observer in
-        // 1 - 방출하고
-        observer.onNext("1")
-        
-//        observer.onError(MyError.anError)
-        
-        // 2 - 끝나고
-//        observer.onCompleted()
-        
-        // 3 - 끝났으니까 넘어가고
-        observer.onNext("?")
-        
-        // 4 - dispose 호출
-        return Disposables.create()
+    enum FileReadError: Error {
+        case fileNotFound, unreadable, encodingFailed
     }
-    .subscribe(onNext: { print($0) },
-               onError: { print($0) },
-               onCompleted: { print("Completed") },
-               onDisposed: { print("Disposed") }
-    )
-    .disposed(by: disposeBag) /// dispose를 안해주면 observable이 계속해서 돌아가고 있어 memory leak이 발생함.
+    
+    func loadText(from name: String) -> Single<String> {
+        return Single.create { single in
+            // create시 disposable을 해줘야함 (create 옵션+클릭)
+            let disposable = Disposables.create()
+            
+            guard let path = Bundle.main.path(forResource: name, ofType: "txt") else {
+                single(.error(FileReadError.fileNotFound))
+                return disposable
+            }
+            
+            guard let data = FileManager.default.contents(atPath: path) else {
+                single(.error(FileReadError.unreadable))
+                return disposable
+            }
+            
+            guard let contents = String(data: data, encoding: .utf8) else {
+                single(.error(FileReadError.encodingFailed))
+                return disposable
+            }
+            
+            single(.success(contents))
+            return disposable
+        }
+    }
+    
+    loadText(from: "Copyright")
+        .subscribe {
+            switch $0 {
+            case .success(let string):
+                print(string)
+            case .error(let error):
+                print(error)
+            }
+        }
+        .disposed(by: disposeBag)
 }
+
 
